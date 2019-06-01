@@ -7,3 +7,8 @@ one project for test
 2.追溯到配置变更的历史，诸如是谁在什么时候修改了哪些内容，根据这些信息进行配置回滚操作。
 
 3.配置中心还能够增加权限管理，保证不同角色不同权限的人只能访问到可看的配置，防止重要线上配置信息的泄露。
+
+ModelAndView包含两部分：一个View和一个Model
+View由setViewName()方法来决定，决定让ViewResolver去哪里找View文件，并找到是哪个jsp文件；
+Model由addObject()方法来决定，它的本质是java的HashMap，键值对；
+用人话来解释ModelAndView的功能就是，View负责渲染Model，让你找到代表View的jsp，用这个jsp去渲染Model中的数据。
